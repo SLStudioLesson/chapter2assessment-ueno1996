@@ -81,7 +81,7 @@ public class RecipeUI {
                 String[] recipe = recipes.split(",", 2);
 
                 System.out.println("-----------------------------------");
-                System.out.println("Recip Name: " + recipe[0]);
+                System.out.println("Recipe Name: " + recipe[0]);
 
                 for(int i = 1; i < recipe.length; i++){
                     System.out.println("Main Ingredients: " + recipe[i]);

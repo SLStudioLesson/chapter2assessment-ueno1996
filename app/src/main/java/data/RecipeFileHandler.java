@@ -35,10 +35,11 @@ public class RecipeFileHandler {
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath));) {
 
-
-            String line;
-            while((line = reader.readLine()) != null){
-                recipes.add(line);
+            if(reader.readLine() != null){
+                String line;
+                while((line = reader.readLine()) != null){
+                    recipes.add(line);
+                }
             }
 
             return recipes;
