@@ -35,18 +35,20 @@ public class RecipeFileHandler {
 
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath));) {
 
-            if(reader.readLine() != null){
-                String line;
-                while((line = reader.readLine()) != null){
-                    recipes.add(line);
-                }
-                return recipes;
+
+            String line;
+            while((line = reader.readLine()) != null){
+                recipes.add(line);
             }
-        
+
+            return recipes;
+                
         } catch (IOException e) {
             System.out.println("Error reading file:" + e.getMessage());
         }
+
         return null;
+        
     }
 
     /**

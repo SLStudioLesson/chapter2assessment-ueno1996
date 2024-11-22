@@ -72,14 +72,15 @@ public class RecipeUI {
          */
 
         //
-        RecipeFileHandler recipeFileHandler = new RecipeFileHandler();
+        fileHandler = new RecipeFileHandler();
 
-        if(recipeFileHandler.readRecipes() != null){
-
-            for(String recipes : recipeFileHandler.readRecipes()){
+        if(fileHandler.readRecipes().size() > 1){
+            System.out.println("Recipes:");
+            for(String recipes : fileHandler.readRecipes()){
 
                 String[] recipe = recipes.split(",", 2);
 
+                System.out.println("-----------------------------------");
                 System.out.println("Recip Name: " + recipe[0]);
 
                 for(int i = 1; i < recipe.length; i++){
